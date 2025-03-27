@@ -1,50 +1,139 @@
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --light-bg: #f9f9f9;
+  --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell;
+  --primary-text: #1d1d1f;
+  --secondary-text: #86868b;
+  --accent-blue: #0071e3;
+  --background: #ffffff;
+  --card-background: #f5f5f7;
+  --card-shadow: 0 4px 8px rgba(0,0,0,0.04);
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  color: #333;
+  font-family: var(--system-font);
+  color: var(--primary-text);
+  background: var(--background);
+  line-height: 1.5;
 }
 
-.container {
-  max-width: 1100px;
+.grid-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
-.header {
-  background: var(--primary-color);
+/* Hero Section */
+.hero {
+  padding: 8rem 0 4rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #000 0%, var(--primary-text) 100%);
   color: white;
-  padding: 2rem 0;
+}
+
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.1);
   margin-bottom: 2rem;
 }
 
-.profile {
+.tech-stack {
   display: flex;
-  align-items: center;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pill {
+  background: rgba(255,255,255,0.1);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Project Showcase */
+.project-showcase {
+  margin: -4rem auto 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 2rem;
+  background: var(--card-background);
+  border-radius: 18px;
+  margin-bottom: 2rem;
+}
+
+.project-preview img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+/* Technical Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.profile-img {
+.skill-category {
+  padding: 1.5rem;
+  background: rgba(0,113,227,0.05);
+  border-radius: 12px;
+}
+
+/* Timeline */
+.timeline {
+  border-left: 2px solid var(--accent-blue);
+  padding-left: 2rem;
+  margin-left: 1rem;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.4rem;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-blue);
   border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 3px solid var(--background);
 }
 
-.section {
-  background: white;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Buttons & Interactions */
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  border-radius: 24px;
+  background: var(--accent-blue);
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-/* Add all other CSS rules from the previous version here */
-/* (Timeline, Skills Grid, Contact Links, Media Queries, etc.) */
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,113,227,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    padding: 4rem 0;
+  }
+}
