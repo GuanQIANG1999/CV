@@ -3,38 +3,104 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guan QIANG - Professional Resume</title>
+  <title>Guan Qiang - Technical Portfolio</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <div class="header">
-    <div class="container">
-      <div class="profile">
-        <img src="images/GuanQIANG_mod.png" alt="Guan QIANG" class="profile-img" width="150" height="150">
-        <div>
-          <h1>Guan QIANG</h1>
-          <p class="tagline">Computer Science Graduate | Full-Stack Developer</p>
-          <p>Passionate developer with experience in iOS and web development, seeking challenging opportunities.</p>
-          <p>Learning to become a Machine Learning Engineering which can make real impact on the world.</p>
-          <p><em>"The philosophers have hitherto only interpreted the world in various ways. The point, however, is to change it."</em></p>
+  <header class="hero">
+    <div class="grid-container">
+      <div class="hero-content">
+        <img src="assets/images/profile.jpg" alt="Guan Qiang" class="profile-image">
+        <h1 class="hero-title">Guan Qiang</h1>
+        <p class="hero-subtitle">Full-Stack Developer & ML Enthusiast</p>
+        <div class="tech-stack">
+          <span class="pill">Python</span>
+          <span class="pill">TensorFlow</span>
+          <span class="pill">React</span>
+          <span class="pill">AWS</span>
         </div>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="container">
-    <!-- All your content sections remain the same as previous version -->
-    <!-- Education, Experience, Skills sections -->
-    
-    <section class="section">
-      <h2>Contact</h2>
-      <div class="contact-links">
-        <a href="gqiang@uwo.ca">📧 Email Me</a>
-        <a href="https://linkedin.com/in/yourprofile">💼 LinkedIn</a>
-        <a href="contact.html">📄 Contact Form</a>
+  <main class="grid-container">
+    <section class="card project-showcase">
+      <h2 class="section-title">Featured Projects</h2>
+      
+      <article class="project-card">
+        <div class="project-preview">
+          <img src="assets/images/project-ai.jpg" alt="Neural Network Visualizer">
+        </div>
+        <div class="project-details">
+          <h3>Real-time Neural Network Visualizer</h3>
+          <div class="project-meta">
+            <span class="badge">TensorFlow.js</span>
+            <span class="badge">WebGL</span>
+            <span class="badge">D3.js</span>
+          </div>
+          <p>Interactive visualization tool demonstrating neural network architectures with real-time training visualization.</p>
+          <div class="project-actions">
+            <a href="#" class="button">Live Demo</a>
+            <a href="#" class="button ghost">Source Code</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Add more project cards -->
+    </section>
+
+    <section class="card technical-skills">
+      <h2 class="section-title">Technical Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Machine Learning</h3>
+          <ul class="skill-list">
+            <li>TensorFlow/PyTorch</li>
+            <li>Computer Vision</li>
+            <li>Natural Language Processing</li>
+            <li>Model Optimization</li>
+          </ul>
+        </div>
+        <!-- Add more skill categories -->
       </div>
     </section>
-  </div>
+
+    <section class="card experience-timeline">
+      <h2 class="section-title">Professional Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>AI Research Intern</h3>
+            <p class="company">AVIC Research</p>
+            <p class="duration">2022 | 6 months</p>
+            <ul class="achievements">
+              <li>Developed predictive maintenance models with 92% accuracy</li>
+              <li>Optimized TensorFlow pipelines for 40% faster inference</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Add more timeline items -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact-footer">
+    <div class="grid-container">
+      <h2>Connect with Code</h2>
+      <div class="contact-methods">
+        <a href="mailto:guan.qiang@example.com" class="contact-link">
+          <img src="assets/icons/mail.svg" alt="Email">
+          <span>Email</span>
+        </a>
+        <a href="https://github.com/yourprofile" class="contact-link">
+          <img src="assets/icons/github.svg" alt="GitHub">
+          <span>GitHub</span>
+        </a>
+        <!-- Add more contact methods -->
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
